@@ -1,0 +1,60 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'twoStrings' function below.
+     *
+     * The function is expected to return a STRING_ARRAY.
+     * The function accepts following parameters:
+     *  1. LONG_INTEGER k
+     *  2. STRING a
+     *  3. STRING b
+     */
+
+    public static List<String> twoStrings(long k, String a, String b) {
+    // Write your code here
+
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+        int n = Integer.parseInt(firstMultipleInput[0]);
+
+        int m = Integer.parseInt(firstMultipleInput[1]);
+
+        long k = Long.parseLong(firstMultipleInput[2]);
+
+        String a = bufferedReader.readLine();
+
+        String b = bufferedReader.readLine();
+
+        List<String> result = Result.twoStrings(k, a, b);
+
+        bufferedWriter.write(
+            result.stream()
+                .collect(joining("\n"))
+            + "\n"
+        );
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
